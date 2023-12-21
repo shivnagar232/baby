@@ -1,5 +1,4 @@
 
-
 from pyrogram import Client
 
 from telethon.sessions import StringSession
@@ -13,7 +12,6 @@ logging.basicConfig(level=logging.DEBUG,
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 logging.getLogger("telethon").setLevel(logging.WARNING)
 
-
 # variables
 API_ID = "26075120" #config("API_ID", default=None, cast=int)
 API_HASH = "1fda88a5d1de46058a4791c78bce198e" #config("API_HASH", default=None)
@@ -21,7 +19,11 @@ BOT_TOKEN = "6468925244:AAFi5pbHG0hRSQYF7sI6BaYWjUZciOarpxo" #config("BOT_TOKEN"
 SESSION = "BQGTAMIAYFP0yfcy0sII4sAzyK5JjbGgFiMb6gVHy44_z4mACuzU6Gl8MGMl5h_89_Rt5kwcCskrNkRlQKA6NeS1R7FNzLy21QSKNxqTblzdwdyQGVNId15YnhH4ZZAGZiiJ69M0h6SRwac_b3m9nOHQnReXi0wdJ8tEG9CYc7kHXMLzQD8DrJh_RmJOnMwl0fSe_8FAxB4abVImyAHOOyZoqjrzeuPD-sSkUotycQ2IqXie6tyiNBypAmSfniAIkVGZXj500fJvb30X7_04C3IMYijpCzx22Mf_npl-xLavYBgOszFRT8SeQ6o6mBcR3svC-u3MMIvxE2JOmq59IskX9ZBDIgAAAAAiRSpcAA" #config("SESSION", default=None)
 FORCESUB = "dev_gagan" #config("FORCESUB", default=None)
 AUTH = "574958172" #config("AUTH", default=None)
-
+SUDO_USERS = []
+if len(AUTH) != 0:
+    SUDO_USERS = {int(AUTH.strip()) for AUTH in AUTH.split()}
+else:
+    SUDO_USERS = set()
 
 bot = TelegramClient('bot', API_ID, API_HASH).start(bot_token=BOT_TOKEN) 
 
