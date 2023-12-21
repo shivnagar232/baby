@@ -1,5 +1,4 @@
-#Tg:@mister_invisiblebot/save_restricted
-#Github. com/mrinvisible7
+
 
 """
 Plugin for both public & private channels!
