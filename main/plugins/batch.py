@@ -8,7 +8,7 @@ import logging
 import time, os, asyncio
 
 from .. import bot as gagan
-from .. import userbot, Bot, AUTH, SUDO_USERS
+from .. import userbot, Bot, AUTH
 #from .. import FORCESUB as fs
 from main.plugins.pyroplug import check, get_bulk_msg
 from main.plugins.helpers import get_link, screenshot
