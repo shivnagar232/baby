@@ -35,7 +35,7 @@ ids = []
     msg = await userbot.get_messages(chat, ids=id)
     await event.client.send_message(event.chat_id, msg) 
 '''   
-@gagan.on(events.NewMessage(incoming=True, from_users=SUDO_USERS, pattern='/batch'))
+@gagan.on(events.NewMessage(incoming=True, from_users=AUTH, pattern='/batch'))
 async def _batch(event):
     '''
     #if not event.is_private:
